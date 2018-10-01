@@ -6,17 +6,22 @@ int main(){
 	scanf("%d",&b);
 	scanf("%d",&c);
 	
-	if(a>=b && a>=c){
+	if(a>=b){
 		maior=a;
 	}
 	
-	if(b>=a && b>=c){
+	else{
 		maior=b;
 	}
-	if(c>=a && c>=b){
+	
+	if(c>=maior){
 		maior=c;
 	}
-	printf("%d\n",maior);
 	
-	return 0;
+printf("%d\n", maior);
+
+return 0;
+
 }
+	
+	
