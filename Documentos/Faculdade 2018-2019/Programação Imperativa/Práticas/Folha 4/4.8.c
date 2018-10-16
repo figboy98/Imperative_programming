@@ -18,5 +18,6 @@ int main(){
 	return 0;
 }
 
-			
+	//Para formar o número binário usamos a mesma lógica da decomposição de numeros decimais somando os seus digitos
+	//multiplicados pela casa onde estão. Exemplo: 1234= 4*1 + 3*10 + 2*100 +1 *1000		
 		
