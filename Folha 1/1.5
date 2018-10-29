@@ -1,0 +1,32 @@
+int a,b,c;
+float x,y;
+(a) printf("d%d%d\n", a, b, c);
+	Corrigido: printf("%d%d%d1n", a,b,c);  Faltava o % antes do primeiro d.
+
+(b) printf("%d;%d\n", x, y);
+	Corrigido: printf("%f;%f", x,y); Para floats usamos o %f e não o %d.
+
+(c) printf("%d,%d\n", a, b, c);
+	Corridigo: printf(%d,%d\n", a,b); Tinha uma variável a mais.
+
+(d) printf("%f,%f,%d\n", a, b, x);
+	Corrigido: printf("%d,%d,%f\n", a, b, x); Para as duas primeiras variáveis usa-se o %d por serem inteiros e na última usa-se o %f por ser um float.
+
+(e) printf("%.2\n", x);
+	Corrigido: printf("%.2f\n", x);
+
+
+(f) scanf("d", &a)
+	Corrigido: scanf("%d", &a);  Faltava a % e o ;
+
+(g) scanf("%f",&b);
+	Corrigido: scanf("%d",&b);Para inteiros usa-se o %d e não o %f.
+
+(h) scanf("%f",y)
+	Corrigido: scanf("%f",y);  Faltava o ; no fim.
+
+
+
+
+
+
