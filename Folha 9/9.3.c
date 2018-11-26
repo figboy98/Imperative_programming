@@ -35,16 +35,16 @@ void normalizar(char str[])
 	
 	for(int i=0; i<size; i++)
 	{
-		if(isalpha(str[i]))
+		if(!isalpha(str[i]))
 		{
+			aux++;
 			for(int j=i; j<size; j++)
 			{
 				str[j] =str[j+1];
 			}
-			aux++;
 		}
 	}
-
+str[(size-aux)]='\0';
 }
 
 void main()
@@ -53,11 +53,10 @@ void main()
 	
 	fgets(str1, 100, stdin);
 	fflush(stdin);
-	fgets(str2,100, stdin);
+	//fgets(str2,100, stdin);
 	
-	//normalizar(str1);
+	normalizar(str1);
 	//normalizar(str2);
-	ordena(str1);
 	fputs(str1, stdout);
 	
 }
