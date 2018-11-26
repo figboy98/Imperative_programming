@@ -20,7 +20,7 @@ void ordena(char str[])
 
 void normalizar(char str[])
 {
-	int i=0,aux=0;
+	int aux=0,j;
 	int size=strlen(str);
 	
 	ordena(str);
@@ -33,18 +33,44 @@ void normalizar(char str[])
 		}
 	}
 	
-	for(int i=0; i<size; i++)
+	for(int i=0; str[i] != '\0'; i++)
 	{
-		if(!isalpha(str[i]))
+		while(!isalpha(str[i]))
 		{
-			aux++;
-			for(int j=i; j<size; j++)
+			
+			for(j=i; str[j]!='\0'; j++)
 			{
 				str[j] =str[j+1];
 			}
+			str[j]='\0';
+		}
+		
+	} 
+
+}
+
+int anagrama(char str1[], char str2[])
+{
+	normalizar(str1);
+	
+	normalizar(str2);
+	
+	
+	int size1=strlen(str1);
+	int size2=strlen(str2);
+	
+	if(size1 != size2)
+	{
+		return 0;
+	}
+	for(int i=0; i<size1; i++)
+	{
+		if(str1[i] != str2[i])
+		{
+			return 0;
 		}
 	}
-str[(size-aux)]='\0';
+	return 1;
 }
 
 void main()
@@ -53,11 +79,14 @@ void main()
 	
 	fgets(str1, 100, stdin);
 	fflush(stdin);
-	//fgets(str2,100, stdin);
+	fgets(str2,100, stdin);
 	
 	normalizar(str1);
-	//normalizar(str2);
-	fputs(str1, stdout);
+	normalizar(str2);
+	int size1=strlen(str1);
+	int size2=strlen(str2); 
+	
+	printf("%d\n", anagrama(str1, str2));
 	
 }
 
