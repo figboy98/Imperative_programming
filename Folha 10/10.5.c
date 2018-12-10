@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int *mdc(int *num, int *denom)
+int mdc(int num, int denom)
 {
-	while(*num != *denom)
+	while(num != denom)
 	{
-		if(*num > *denom)
+		if(num > denom)
 		{
-			*num= *num- *denom;
+			num= num - denom;
 		}
 		else
 		{
-			*denom= *denom -*num;
+			denom= denom -num;
 		}
 	}
 	return num;
@@ -19,29 +19,28 @@ int *mdc(int *num, int *denom)
  
 void reduzir(int *pnum, int *pdenom)
 {
-	int *div= mdc(pnum, pdenom);
+	int num=*pnum;
+	int denom=*pdenom;
+	
+	int div= mdc(num, denom);
 	
 	
-	printf("%d\n", *pdenom);
 
-	*pnum = (*pnum/(*div));
+	*pnum = *pnum/div;
 	
-	printf("%d\n", *pnum);
-	
-	*pdenom= *pdenom/(*div);
+	*pdenom= *pdenom/div; 
 }
 
 int main()
 {
-	int pnum=10;
+	int pnum=5;
 	
-	int pdenom=5;
+	int pdenom=10;
 	
-	//printf("%d/%d = ", pnum, pdenom);
 	
-	reduzir(&pnum, &pdenom);
+	reduzir(&pnum,&pdenom);
 	
-	//printf( "%d/%d\n", pnum, pdenom);
+	printf( "%d/%d\n", pnum, pdenom);
 }
 
 	
