@@ -14,7 +14,7 @@ int contar_espacos(char *str){
 }
 
 int main(){
-	char *str="   ";
+	char str[100]="   ";
 	
 	
 	int espacos=(contar_espacos(str));
