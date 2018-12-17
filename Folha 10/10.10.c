@@ -19,10 +19,10 @@ int comparar( char *str1, char *str2){
 }
 
 int main(){
-	char str1[100]="Hello World";
+	char str1[100]="Hello world";
 	char str2[100]="Hello World";
 	
-	int aux=(comparar(str1, str2);
+	int aux=(comparar(str1, str2));
 	
 	printf("%d\n", aux);
 	return 0;
