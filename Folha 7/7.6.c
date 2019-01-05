@@ -7,7 +7,7 @@ int decimal(char str[]){
 	
 	for(int i=size-1; i>=0; i--)
 	{ 
-		int n= (str[i] -'0');
+		int n= (str[i] - '0');  // Converte o caracter que está na string como char para o número correspondente
 		numero+= (n*multiplicador);
 		multiplicador*=10;
 	}
